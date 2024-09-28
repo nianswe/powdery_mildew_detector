@@ -15,7 +15,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 
     prob_per_class = pd.DataFrame(
         data=[0, 0],
-        index={'powdery_mildew': 0, 'healthy': 1}.keys(),
+        index={'healthy': 0, 'powdery_mildew': 1}.keys(),
         columns=['Probability']
     )
     prob_per_class.loc[pred_class] = pred_proba
@@ -78,7 +78,7 @@ def load_model_and_predict(my_image, version):
 
     pred_proba = model.predict(my_image)[0, 0]
 
-    target_map = {v: k for k, v in {'healthy': 0, 'infected': 1}.items()}
+    target_map = {v: k for k, v in {'healthy': 0, 'powdery_mildew': 1}.items()}
     pred_class = target_map[pred_proba > 0.5]
     if pred_class == target_map[0]:
         pred_proba = 1 - pred_proba

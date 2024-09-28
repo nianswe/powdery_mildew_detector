@@ -1,5 +1,6 @@
 kaggle.json
 __pycache__/
 outputs/v1
+outputs/v6
 inputs/cherry-leaves/cherry-leaves/test
 inputs/cherry-leaves/cherry-leaves/train
