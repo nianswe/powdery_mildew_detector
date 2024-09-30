@@ -24,6 +24,11 @@ def page_ml_performance_metrics():
     model_loss = plt.imread(f"outputs/{version}/model_training_losses.png")
     st.image(model_loss, caption='Model Training Losses')
     st.write("---")
+    
+    model_loss = plt.imread(f"outputs/{version}/confusion_matrix.png")
+    st.image(model_loss, caption='Confusion Matrix')
+    st.write("---")   
+    
 
     st.write("### Generalised Performance on Test Set")
     st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
