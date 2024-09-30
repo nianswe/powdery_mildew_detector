@@ -3,5 +3,6 @@ __pycache__/
 *.ipynb
 outputs/v1
 outputs/v6
+outputs/v7
 inputs/cherry-leaves/cherry-leaves/test
 inputs/cherry-leaves/cherry-leaves/train
