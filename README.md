@@ -1,6 +1,6 @@
 # <h1 align="center">**Powdery Mildew Detector**<h1>
 
-# Deployed version at [Powdery Mildew Detector](https://cherry-powdery-mildew-detector-1f2a15f26a31.herokuapp.com/)
+## Deployed version at [Powdery Mildew Detector](https://cherry-powdery-mildew-detector-1f2a15f26a31.herokuapp.com/)
 
 # Table of Contents 
 1. [Dataset Content](#dataset-content)
@@ -34,11 +34,9 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 We have agreed on the following business requirements with our client:
 
-1.  Business Requirement 1 (BR1): Data Visualization
-    The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+1.  Business Requirement 1 (BR1): Data Visualization - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
     
-2.  Business Requirement 2 (BR2): CNN Model for Health State Classification
-    The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew in a dashboard.
+2.  Business Requirement 2 (BR2): CNN Model for Health State Classification - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew in a dashboard.
 
 ## Epics & User Stories
 To address these business requirements, we have outlined the following epics and user stories. Each user story is broken down into manageable tasks, following an agile development process.
@@ -63,12 +61,13 @@ To address these business requirements, we have outlined the following epics and
 
 # Hypotheses and Validations
 1. Hypothesis 1: Symptom Correlation
-    - **Hypothesis:** We suspect cherry leaves infected with powdery mildew have clear marks/signs, infected leaves have white powdery spots and stems, that can differentiate them from an uninfected leaf.
-        An Image Montage shows that typically a leaf infected with powdery mildew has white powdery spots and structure. \n"
-        Average Image, Variability Image and Difference between Averages studies did not reveal any clear pattern to differentiate one from another.\n"
+    - **Hypothesis:**
+        - We suspect cherry leaves infected with powdery mildew have clear marks/signs, infected leaves have white powdery spots and stems, that can differentiate them from an uninfected leaf.
+        - An Image Montage shows that typically a leaf infected with powdery mildew has white powdery spots and structure.
+        - Average Image, Variability Image and Difference between Averages studies did not reveal any clear pattern to differentiate one from another.
     - **Validation:**
         - **Average Image Study:** Conduct an average image study to investigate the common features in healthy, and powdery mildew infected leaves.
-        - **Data Annotation:** Annotate the images with specific symptoms such as leaf spots, discoloration, and lesions.
+        - **Data Annotation:** Annotate the images with specific symptoms such as leaf spots and stems.
         - **Symptom Feature Extraction:** Use image processing techniques to extract features related to these symptoms.
         - **Visualization:** Create visualizations such as heatmaps, and annotated average images to illustrate the correlation.
 
@@ -103,10 +102,6 @@ To meet the second business requirement (BR2), we will train a CNN model.
 
 # Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
-
-
 Page 1: Quick Project Summary
 - Genaral information about the project
 - Information about the Dataset
@@ -121,7 +116,7 @@ Page 2: Leaves Visualizer
 
 Page 3: Health State Detector
 - Describe Business Requirement 2
-- Link to Cherry-Leaves Kaggle Dataset where you can dounload a set of powdery mildew infected and healthy images for live prediction.
+- Link to Cherry-Leaves Kaggle Dataset where you can download a set of powdery mildew infected and healthy images for live prediction.
 - Upload leaf images to get real-time classification results, where you can browse for sample files or drag and drop.
 - Display prediction statements and associated probabilities.
 - Provide a downloadable report of the examined leaves.
@@ -211,16 +206,15 @@ To fork this repository, follow these steps:
 - Python
 
 ## Main Data Analysis and Machine Learning Libraries
-numpy
-joblib==1.4.2
-matplotlib==3.9.2
-numpy==1.26.4
-seaborn==0.13.2
-streamlit==1.38.0
-tensorflow-cpu==2.17.0
-tqdm==4.66.5
-scipy==1.14.1   
-scikit-learn==1.5.2
+**numpy 1.26.4**: Utilized for array conversions.
+**joblib 1.4.2**:
+**matplotlib 3.9.2**: Plotted dataset distributions.
+**seaborn 0.13.2**: Plotted the model's confusion matrix.
+**streamlit 1.38.0**: Developed the project dashboard.
+**tensorflow-cpu 2.17.0**: Used for creating the model.
+**tqdm 4.66.5**:
+**scipy 1.14.1**:  
+**scikit-learn 1.5.2**: Applied for model evaluation.
 
 
 - **matplotlib 3.3.1**: Plotted dataset distributions.
@@ -238,4 +232,4 @@ scikit-learn==1.5.2
 # Credits
 
 ## Dataset
-- The Potato leaves dataset is from [Kaggle]
+- The Cherry Leaves dataset is from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
