@@ -23,7 +23,7 @@ def page_summary_body():
         
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/nianswe/CherryLeaves_Sample1/blob/main/README.md).")
+        f"[Project README file](https://github.com/nianswe/powdery_mildew_detector/blob/main/README.md).")
     
 
     st.success(
