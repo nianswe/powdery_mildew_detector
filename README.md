@@ -153,7 +153,7 @@ No known bugs
 ## Creating the Heroku App
 To deploy this project on Heroku, follow these steps:
 1. **Create a `requirements.txt` File**: This file should list all the dependencies the program needs to run. Heroku uses this file to install the necessary packages.
-2. **Set the Python Runtime**: Create a `runtime.txt` file specifying a Python version compatible with the Heroku-20 stack.
+2. **Set the Python Runtime**: Create a `runtime.txt` file specifying a Python version compatible with the Heroku-24 stack.
 3. **Push Changes to GitHub**: Commit and push your recent changes to GitHub.
 4. **Create a Heroku App**:
    - Log into your Heroku account.
@@ -174,7 +174,7 @@ To deploy this project on Heroku, follow these steps:
 To make a clone of this repository, follow these steps:
 
 1. **Login to your GitHub account**.
-2. **Go to the repository** by visiting the link: [Charlie McGoldrick Github - SpudScan Repo](https://github.com/CharlieMcGoldrick/ci-ms5-spudscan).
+2. **Go to the repository** by visiting the link: [nianswe Github - powdery_mildew_detector Repo](https://github.com/nianswe/powdery_mildew_detector).
 3. **Click the "Code" button** and then use the copy button next to the link to copy the link.
 4. **In your IDE of choice, open a new terminal** and use the following clone command:
    `git clone https://github.com/CharlieMcGoldrick/ci-ms5-spudscan`
@@ -184,7 +184,7 @@ To make a clone of this repository, follow these steps:
 To fork this repository, follow these steps:
 
 1. **Log in to your GitHub account**.
-2. **Go to the repository you want to fork**, which is located at: [Charlie McGoldrick Github - SpudScan Repo](https://github.com/CharlieMcGoldrick/ci-ms5-spudscan).
+2. **Go to the repository you want to fork**, which is located at: [nianswe Github - powdery_mildew_detector Repo](https://github.com/nianswe/powdery_mildew_detector).
 3. **In the top-right corner of the repository page, click on the "Fork" button**.
 4. **GitHub will prompt you to select where you want to fork the repository**. Choose your personal account or organization.
 5. **Wait for the forking process to complete**. Once it's done, you will be redirected to your forked repository under your GitHub account.

@@ -64,18 +64,17 @@ def page_ml_performance_metrics():
     st.image(model_loss, caption='Confusion Matrix of Test Dataset')
     
     st.success('''
-        The confusion matrix shows the model made 3 incorrect predictions when 
+        The confusion matrix shows the model made 16 incorrect predictions when 
         evaluating the test dataset where a fractured bone was predicted to be healthy.''')
     st.write("---")   
     
     st.write("* ### Conclusions")
 
-    st.warning('''
+    st.info('''
         The ML model/pipeline has been successful:
-        * Business Requirement 1: This requirement is met as the Leaves Visualizer page 
+        - Business Requirement 1: This requirement is met as the Leaves Visualizer page 
         shows that a cherry leaf that is healthy can be differentiated from one that contains powdery mildew.\n"
-        
-        *Business Requirement 2: This requirement is met as the Powdery Mildew Detection page 
+        - Business Requirement 2: This requirement is met as the Powdery Mildew Detection page 
         will predict if a cherry tree is healthy or contains powdery mildew with a 98% accuracy rate.''')
     
     
