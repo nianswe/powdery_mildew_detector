@@ -215,17 +215,8 @@ To fork this repository, follow these steps:
 **tqdm 4.66.5**:
 **scipy 1.14.1**:  
 **scikit-learn 1.5.2**: Applied for model evaluation.
+**keras 3.6.0**: Set model hyperparameters.
 
-
-- **matplotlib 3.3.1**: Plotted dataset distributions.
-- **numpy 1.19.2**: Utilized for array conversions.
-- **pandas 1.1.2**: Managed data creation and storage as dataframes.
-- **tensorflow-cpu 2.6.0**: Used for creating the model.
-- **keras 2.6.0**: Set model hyperparameters.
-- **scikit-learn 0.24.2**: Applied for model evaluation.
--X **plotly 5.12.0**: Visualized the model's learning curve.
-- **seaborn 0.11.0**: Plotted the model's confusion matrix.
-- **streamlit 0.85.0**: Developed the project dashboard.
 
 [Back to top ⇧](#table-of-contents)
 
