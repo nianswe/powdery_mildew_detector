@@ -15,9 +15,10 @@
 10. [Credits](#credits)
 11. [Acknowledgements](#acknowledgements)
 
-## Dataset Content
-- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+# Dataset Content
+The dataset is the Cherry Leaves Powdery Mildew Dataset from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
+
+This dataset contains 4208 images of cherry leaves, categorized based on their health and disease status, infected with powdery mildew or healthy. The dataset is designed for use in developing and testing models for accurate identification and classification of cherry leaves diseases.
 
 ## Categories Included
 - Healthy (2104 images)
@@ -27,18 +28,38 @@
 [Back to top ⇧](#table-of-contents)
 
 # Business Requirements
-
-The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
-
-To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
+Powdery mildew is a fungal disease that affects a wide range of plants.
+Powdery mildew diseases are caused by many different species of ascomycete fungi in the order Erysiphales.
+Powdery mildew is one of the easier plant diseases to identify, as the signs of the causal pathogen are quite distinctive.
+Infected plants display white powdery spots on the leaves and stems.
+This mycelial layer may quickly spread to cover all of the leaves.
+The lower leaves are the most affected, but the mildew can appear on any above-ground part of the plant.
+As the disease progresses, the spots get larger and denser as large numbers of asexual spores are formed, and the mildew may spread up and down the length of the plant.
 
 We have agreed on the following business requirements with our client:
 
 1.  Business Requirement 1 (BR1): Data Visualization
     The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
-    
+
+    - We will display the "mean" and "standard deviation" images for healthy, powdery mildew.
+    - We will display the difference between average leaves.
+    - We will display an image montage for healthy, powdery mildew.
+
+    •	Your study should include at least analysis on:
+        o	average images and variability images for each class (healthy or powdery mildew),
+        o	the differences between average healthy and average powdery mildew cherry leaves,
+        o	an image montage for each class.
+
+
 2.  Business Requirement 2 (BR2): CNN Model for Health State Classification
-    The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew in a dashboard.
+    The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+
+    - We want to predict if a given leaf is healthy or has powdery mildew.
+    - We want to build a caterogical classifier and generate reports.
+    
+        o	You may deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew. In this case, we suggest to use Neural Networks to map the relationships between the features and the labels.
+
+        o	You will notice when exploring the dataset that the images are 256 pixels × 256 pixels. When defining your image shape to load the images to memory for training the model, you may choose 256 × 256 as your image shape. However, that will lead to a trained model that will likely be larger than 100Mb. This is fine as long as the model meets the project requirement, the caveat is that you may need to use Git LFS (Large File Storage) to push files larger than 100Mb to GitHub. As a result, we suggest you consider using an image shape that is smaller, like 100 × 100 or 50 × 50, with the expectation that the model would still meet the performance requirement and will be smaller than 100Mb for a smoother push to GitHub.
 
 ## Epics & User Stories
 To address these business requirements, we have outlined the following epics and user stories. Each user story is broken down into manageable tasks, following an agile development process.
@@ -102,27 +123,17 @@ To meet the second business requirement (BR2), we will train a CNN model.
 [Back to top ⇧](#table-of-contents)
 
 # Dashboard Design
-
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
-
+The dataset provided contains 4208 images of cherry leaves, categorized as healthy or powdery mildew. This data will be used to train and validate the model. The model will be integrated into an interactive dashboard to allow real-time health state classification and visualization of the results.
 
 Page 1: Quick Project Summary
-- Genaral information about the project
-- Information about the Dataset
-- Link to Project README file
-- Information about the business requirements.
+- Overview of the project, dataset, and business requirements.
 
-Page 2: Leaves Visualizer
-- Describe Business Requirement 1
-- Difference between average and variability image - Interactive visualizations to differentiate between healthy and diseased leaves.
-- Difference between average Powdery Mildew Infected and average Healthy - Display mean and standard deviation images for each health category.
-- Image Montage - Create a fresh montage of 24 Powdery Mildew Infected or Healthy images
+Page 2: Leaf Visualizer
+- Interactive visualizations to differentiate between healthy and diseased leaves.
+- Display mean and standard deviation images for each health category.
 
 Page 3: Health State Detector
-- Describe Business Requirement 2
-- Link to Cherry-Leaves Kaggle Dataset where you can dounload a set of powdery mildew infected and healthy images for live prediction.
-- Upload leaf images to get real-time classification results, where you can browse for sample files or drag and drop.
+- Upload leaf images to get real-time classification results.
 - Display prediction statements and associated probabilities.
 - Provide a downloadable report of the examined leaves.
 
