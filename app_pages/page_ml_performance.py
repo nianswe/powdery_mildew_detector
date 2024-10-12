@@ -14,13 +14,14 @@ def page_ml_performance_metrics():
     
     st.write("### Train, Validation and Test Set: Labels Frequencies")
 
-    st.info('''
-        The cherry leaves dataset contains 4208 images. Half of the images show /n
-        healthy leaves, and half show leaves infected with powdery mildew. /n
-        The dataset was divided into 3 sets:
-        - Train Set - 70% of the dataset.
-        - Test Set - 20% of the dataset.
-        - Validation Set - 10% of the dataset.''')
+    st.info(
+        "The cherry leaves dataset contains 4208 images.\n"
+        "Half of the images show healthy leaves, and half show leaves infected with powdery mildew.\n"
+        "The dataset was divided into 3 sets:\n"
+        "- Train Set - 70% of the dataset."
+        "- Test Set - 20% of the dataset."
+        "- Validation Set - 10% of the dataset."
+        )
     
     labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
     st.image(labels_distribution,
@@ -32,11 +33,11 @@ def page_ml_performance_metrics():
 
     st.write("### Model History")
     
-    st.info('''
-        The following plots show the model training accuracy and losses. The accuracy 
-        is the measure of the model's prediction accuracy compared to the true data 
-        (val_acc). The loss indicates incorrect predictions on the train set (loss) 
-        and validation set (val_loss).''')
+    st.info(
+        "The following plots show the model training accuracy and losses.\n"
+        "The accuracy is the measure of the model's prediction accuracy compared to the true data (val_acc).\n"
+        "The loss indicates incorrect predictions on the train set (loss) and validation set (val_loss)."
+        )
      
     model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
     st.image(model_acc, caption='Model Training Accuracy')
@@ -44,9 +45,9 @@ def page_ml_performance_metrics():
     model_loss = plt.imread(f"outputs/{version}/model_training_losses.png")
     st.image(model_loss, caption='Model Training Losses')
         
-    st.success('''
-        Both plots suggests the model exhibits a normal fit with no severe overfitting 
-        or underfitting as the two lines follow the same pattern.''')
+    st.success(
+        "Both plots suggests the model exhibits a normal fit with no severe overfitting \n"
+        "or underfitting as the two lines follow the same pattern.")
     
     st.write("---")
     
@@ -54,31 +55,34 @@ def page_ml_performance_metrics():
     
     st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
     
-    st.success('''
-        The prediction accuracy of the test set data is above 97%. This is below 100%, suggesting the model is not overfitting.''')
+    st.success(
+        "The prediction accuracy of the test set data is above 97%. This is below 100%, suggesting the model is not overfitting.")
     
-    st.info('''
-        The following plot shows the confusion matrix for the test dataset. It shows the four possible combinations of outcomes: /n
-        True Positive / Negative - The model prediction is correct (green) /n False Positive / Negative - The model prediction is incorrect (red).
-        A good model has a high True rate and a low False rate.''')
+    st.info(
+        "The following plot shows the confusion matrix for the test dataset.\n"
+        "It shows the four possible combinations of outcomes: \n"
+        "True Positive / Negative - The model prediction is correct (green) \n"
+        "False Positive / Negative - The model prediction is incorrect (red). \n"
+        "A good model has a high True rate and a low False rate."
+        )
         
     model_loss = plt.imread(f"outputs/{version}/confusion_matrix.png")
     st.image(model_loss, caption='Confusion Matrix of Test Dataset')
     
-    st.success('''
-        The confusion matrix shows the model made 16 incorrect predictions when 
-        evaluating the test dataset where a fractured bone was predicted to be healthy.''')
+    st.success(
+        "The confusion matrix shows the model made 16 incorrect predictions when evaluating the test dataset where a fractured bone was predicted to be healthy."
+        )
     
     st.write("---")   
     
     st.write("### Conclusions")
 
-    st.info('''
-        The ML model/pipeline has been successful:
-        - Business Requirement 1: This requirement is met as the Leaves Visualizer page 
-        shows that a cherry leaf that is healthy can be differentiated from one that contains powdery mildew.\n"
-        - Business Requirement 2: This requirement is met as the Powdery Mildew Detection page 
-        will predict if a cherry tree is healthy or contains powdery mildew with a 98% accuracy rate.''')
+    st.info(
+        "The ML model/pipeline has been successful:\n"
+        "- Business Requirement 1: This requirement is met as the Leaves Visualizer page \n"
+        "shows that a cherry leaf that is healthy can be differentiated from one that contains powdery mildew.\n"
+        "- Business Requirement 2: This requirement is met as the Powdery Mildew Detection page \n"
+        "will predict if a cherry tree is healthy or contains powdery mildew with a 98% accuracy rate.")
     
     st.write("---")
     st.write("---")
