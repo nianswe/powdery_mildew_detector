@@ -8,17 +8,19 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 def page_ml_performance_metrics():
     version = 'v9'
 
-    st.write("## **Performance Metrics**")
+    st.write("## **ML Performance Metrics**")
     
-    st.write("* ### Train, Validation and Test Set: Labels Frequencies")
+    st.write("---")
+    
+    st.write("### Train, Validation and Test Set: Labels Frequencies")
 
     st.info('''
         The cherry leaves dataset contains 4208 images. Half of the images show /n
         healthy leaves, and half show leaves infected with powdery mildew. /n
-        The dataset was divided into 3 sets: /n
-        - Train Set - 70% of the dataset. /n
-        - Test Set - 20% of the dataset. /n
-        - Validation Set - 10% of the dataset. /n''')
+        The dataset was divided into 3 sets:
+        - Train Set - 70% of the dataset.
+        - Test Set - 20% of the dataset.
+        - Validation Set - 10% of the dataset.''')
     
     labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
     st.image(labels_distribution,
@@ -28,8 +30,7 @@ def page_ml_performance_metrics():
     
     st.write("---")
 
-
-    st.write("* ## Model History")
+    st.write("### Model History")
     
     st.info('''
         The following plots show the model training accuracy and losses. The accuracy 
@@ -42,11 +43,12 @@ def page_ml_performance_metrics():
         
     model_loss = plt.imread(f"outputs/{version}/model_training_losses.png")
     st.image(model_loss, caption='Model Training Losses')
-    st.write("---")
-    
+        
     st.success('''
         Both plots suggests the model exhibits a normal fit with no severe overfitting 
         or underfitting as the two lines follow the same pattern.''')
+    
+    st.write("---")
     
     st.write("### Generalised Performance on Test Set")
     
@@ -66,9 +68,10 @@ def page_ml_performance_metrics():
     st.success('''
         The confusion matrix shows the model made 16 incorrect predictions when 
         evaluating the test dataset where a fractured bone was predicted to be healthy.''')
+    
     st.write("---")   
     
-    st.write("* ### Conclusions")
+    st.write("### Conclusions")
 
     st.info('''
         The ML model/pipeline has been successful:
@@ -77,4 +80,5 @@ def page_ml_performance_metrics():
         - Business Requirement 2: This requirement is met as the Powdery Mildew Detection page 
         will predict if a cherry tree is healthy or contains powdery mildew with a 98% accuracy rate.''')
     
-    
+    st.write("---")
+    st.write("---")
