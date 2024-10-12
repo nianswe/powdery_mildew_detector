@@ -56,8 +56,8 @@ def page_ml_performance_metrics():
         The prediction accuracy of the test set data is above 97%. This is below 100%, suggesting the model is not overfitting.''')
     
     st.info('''
-        The following plot shows the confusion matrix for the test dataset. It shows the four possible combinations of outcomes:
-        True Positive / Negative - The model prediction is correct (green) False Positive / Negative - The model prediction is incorrect (red).
+        The following plot shows the confusion matrix for the test dataset. It shows the four possible combinations of outcomes: /n
+        True Positive / Negative - The model prediction is correct (green) /n False Positive / Negative - The model prediction is incorrect (red).
         A good model has a high True rate and a low False rate.''')
         
     model_loss = plt.imread(f"outputs/{version}/confusion_matrix.png")
