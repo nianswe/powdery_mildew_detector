@@ -24,7 +24,7 @@ def page_powdery_mildew_detector():
     st.write("---")
 
     images_buffer = st.file_uploader('Upload cherry leaves samples. You may select more than one.',
-                                     type=['png', 'jpg', 'jpeg'], accept_multiple_files=True)                                       
+                                     type='jpg', accept_multiple_files=True)
    
     if images_buffer is not None:
 
