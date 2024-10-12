@@ -15,12 +15,12 @@ def page_ml_performance_metrics():
     st.write("### Train, Validation and Test Set: Labels Frequencies")
 
     st.info(
-        "The cherry leaves dataset contains 4208 images.\n\n"
-        "Half of the images show healthy leaves, and half show leaves infected with powdery mildew.\n\n"
-        "The dataset was divided into 3 sets:\n\n"
-        "- Train Set - 70% of the dataset.\n\n"
-        "- Test Set - 20% of the dataset.\n\n"
-        "- Validation Set - 10% of the dataset.\n\n"
+        "The cherry leaves dataset contains 4208 images.\n"
+        "Half of the images show healthy leaves, and half show leaves infected with powdery mildew.\n"
+        "The dataset was divided into 3 sets:\n"
+        "- Train Set - 70% of the dataset.\n"
+        "- Test Set - 20% of the dataset.\n"
+        "- Validation Set - 10% of the dataset.\n"
         )
     
     labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
@@ -34,8 +34,8 @@ def page_ml_performance_metrics():
     st.write("### Model History")
     
     st.info(
-        "The following plots show the model training accuracy and losses.\n\n"
-        "The accuracy is the measure of the model's prediction accuracy compared to the true data (val_acc).\n\n"
+        "The following plots show the model training accuracy and losses.\n"
+        "The accuracy is the measure of the model's prediction accuracy compared to the true data (val_acc).\n"
         "The loss indicates incorrect predictions on the train set (loss) and validation set (val_loss)."
         )
      
@@ -46,7 +46,7 @@ def page_ml_performance_metrics():
     st.image(model_loss, caption='Model Training Losses')
         
     st.success(
-        "Both plots suggests the model exhibits a normal fit with no severe overfitting \n\n"
+        "Both plots suggests the model exhibits a normal fit with no severe overfitting \n"
         "or underfitting as the two lines follow the same pattern.")
     
     st.write("---")
