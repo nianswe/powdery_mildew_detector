@@ -6,7 +6,7 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
 def page_ml_performance_metrics():
-    version = 'v9'
+    version = 'v10'
 
     st.write("## **ML Performance Metrics**")
     
