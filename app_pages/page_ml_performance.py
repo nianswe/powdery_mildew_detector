@@ -75,7 +75,7 @@ def page_ml_performance_metrics():
     st.image(model_loss, caption='Confusion Matrix of Test Dataset')
 
     st.success(
-        "The confusion matrix shows the model made 16 incorrect predictions \
+        "The confusion matrix shows the model made 3 incorrect predictions \
             when evaluating the test dataset where a fractured bone was \
                 predicted to be healthy."
         )

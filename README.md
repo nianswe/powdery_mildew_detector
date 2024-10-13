@@ -232,30 +232,32 @@ To fork this repository, follow these steps:
 - Python
 
 ## Main Data Analysis and Machine Learning Libraries
-**numpy 1.26.4**: Utilized for array conversions.
-**joblib 1.4.2**: Running Python functions as pipeline jobs
-**matplotlib 3.9.2**: Plotted dataset distributions.
-**seaborn 0.13.2**: Plotted the model's confusion matrix.
-**streamlit 1.38.0**: Developed the project dashboard.
-**tensorflow-cpu 2.17.0**: Used for creating the model.
-**tqdm 4.66.5**: Progress bar in file upload
-**scipy 1.14.1**:  SciPy 
-**scikit-learn 1.5.2**: Applied for model evaluation.
-**keras 3.6.0**: Set model hyperparameters.
+- **numpy 1.26.4**: Utilized for array conversions.
+- **joblib 1.4.2**: Running Python functions as pipeline jobs.
+- **matplotlib 3.9.2**: Plotted dataset distributions.
+- **seaborn 0.13.2**: Plotted the model's confusion matrix.
+- **streamlit 1.38.0**: Developed the project dashboard.
+- **tensorflow-cpu 2.17.0**: Used for creating the model.
+- **tqdm 4.66.5**: Progress bar in file upload
+- **scipy 1.14.1**:  SciPy 
+- **scikit-learn 1.5.2**: Applied for model evaluation.
+- **keras 3.6.0**: Set model hyperparameters.
 
 
 [Back to top ⇧](#table-of-contents)
 
 # Credits
 
-The Code Institute, Malaria Detector project (https://github.com/Code-Institute-Solutions/WalkthroughProject01)
-CharlieMcGoldrick, ci-ms5-spudscan Project (https://github.com/CharlieMcGoldrick/ci-ms5-spudscan)
-ObiWanBonobi, Bone-Fracture-Detection Project (https://github.com/ObiWanBonobi/Bone-Fracture-Detection)
+Code:
+- The Code Institute, Malaria Detector project (https://github.com/Code-Institute-Solutions/WalkthroughProject01)
+- CharlieMcGoldrick, ci-ms5-spudscan Project (https://github.com/CharlieMcGoldrick/ci-ms5-spudscan)
+- ObiWanBonobi, Bone-Fracture-Detection Project (https://github.com/ObiWanBonobi/Bone-Fracture-Detection)
+
+
 The readme template and layout comes from:
  - ObiWanBonobi Bone-Fracture-Detection Project
  - CharlieMcGoldrick, ci-ms5-spudscan Project
  - The Code Institute, Malaria Detector Project 
-
 
 ## Dataset
 - The Cherry Leaves dataset is from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
