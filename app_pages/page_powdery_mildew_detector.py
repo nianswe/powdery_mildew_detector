@@ -28,7 +28,7 @@ def page_powdery_mildew_detector():
    
     if images_buffer is not None:
 
-        df_report = pd.DataFrame(columns=['Name', 'Result'])
+        df_report = pd.DataFrame(columns=['Name', 'Result', 'Probability'])
 
         for image in tqdm(images_buffer, desc="Processing images"):
             try:
@@ -43,7 +43,7 @@ def page_powdery_mildew_detector():
                 pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
                 plot_predictions_probabilities(pred_proba, pred_class)
 
-                df_report = df_report._append({'Name': image.name, 'Result': pred_class}, ignore_index=True)
+                df_report = df_report._append({'Name': image.name, 'Result': pred_class, 'Probability': pred_proba}, ignore_index=True)
             
             except Exception as e:
                 st.error(f"Error processing image {image.name}: {str(e)}")
