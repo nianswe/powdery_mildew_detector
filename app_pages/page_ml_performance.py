@@ -75,9 +75,10 @@ def page_ml_performance_metrics():
     st.image(model_loss, caption='Confusion Matrix of Test Dataset')
 
     st.success(
-        "The confusion matrix shows the model made 3 incorrect predictions \
-            when evaluating the test dataset where a fractured bone was \
-                predicted to be healthy."
+        "The confusion matrix shows the model made 2 incorrect predictions \
+            when evaluating the test dataset where a cherry leaf was \
+                predicted to be healthy when it was infected, and 1 when it was \
+                predicted to be infected when it was healthy."
         )
 
     st.write("---")
@@ -93,7 +94,7 @@ def page_ml_performance_metrics():
         "- Business Requirement 2: This requirement is met as the Powdery \
             Mildew Detection page \n"
         "will predict if a cherry tree is healthy or contains powdery mildew \
-            with a 98% accuracy rate.")
+            with a 99% accuracy rate.")
 
     st.write("---")
     st.write("---")
