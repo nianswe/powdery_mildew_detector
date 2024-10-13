@@ -138,22 +138,39 @@ Page 5: ML Performance Metrics
 [Back to top ⇧](#table-of-contents)
 
 # Bugs
-1. When first using 'softmax' model and categorical_crossentropy insted of 'sigmoid' model and binary_crossentropy that ws used in walkthrough project and not permitted in this project, prediction first where 100% inverted.
-Whis issues are solved out by changing the value when publish prediction of class to 'pred_class = target_map[pred_proba < 0.5]', when using 'sigmoid' model and binary_crossentropy 'pred_class = target_map[pred_proba > 0.5]' where the correct value to get the correct classification prediction.
-This I can not really explain.
-
-2. I found an incorrect prediction of classification on one specific image of a leaf obvious infected with powdery mildew but precicted as healthy.
-The issue in this case is the colour of the background.
-See images:
-
-
-
-
 
 ## Known Bugs
-No known bugs
+* Becauce of limitation in Heroku Deployment of maximum of 500 MB the following packages are installed in the Jupyter Notebooks and not automaticly installed in the initial requirement.txt installation:
+    - Kaggle package
+    - Scipy 1.14.1 Package (pip install scipy==1.14.1)
+    - Scikit-Learn Package (pip install scikit-learn==1.5.2) 
+
+* I found an incorrect prediction of classification on one specific image of a leaf obvious infected with powdery mildew but precicted as healthy.
+The issue in this case is related to the colour of the image background.
+See images:
+
+**Bright backbround give wrong prediction**
+
+![backbround wrong prediction](media/backbround-wrong-prediction.png)
+
+**( 0576.JPG ) Healthy but predicted powdery mildew**
+
+![healthy but predicted powdery mildew](media/0576.JPG)
+
+**( background-0576.JPG ) Same image with modified backbround predicted healthy**
+
+![Same image with modified backbround predicted healthy](media/bg-0576.JPG)
+
+**( corner-background-0576.JPG ) Same image with modified backbround corner predicted healthy**
+
+![Same image with modified backbround corner predicted healthy](media/cor-bg-0576.JPG)
+
 
 ## Fixed Bugs
+
+* When first using 'softmax' model and categorical_crossentropy insted of 'sigmoid' model and binary_crossentropy that where used in walkthrough project and not permitted in this project, prediction first where 100% inverted.
+This issues are solved by changing the value when publish prediction of class to 'pred_class = target_map[pred_proba < 0.5]', when using 'sigmoid' model and binary_crossentropy 'pred_class = target_map[pred_proba > 0.5]' where the correct value to get the correct classification prediction.
+This I can not really explain.
 
 [Back to top ⇧](#table-of-contents)
 
@@ -216,7 +233,7 @@ To fork this repository, follow these steps:
 
 ## Main Data Analysis and Machine Learning Libraries
 **numpy 1.26.4**: Utilized for array conversions.
-**joblib 1.4.2**:
+**joblib 1.4.2**: 
 **matplotlib 3.9.2**: Plotted dataset distributions.
 **seaborn 0.13.2**: Plotted the model's confusion matrix.
 **streamlit 1.38.0**: Developed the project dashboard.
