@@ -20,9 +20,8 @@ def page_powdery_mildew_detector():
 
     st.write(
         f"* You can download a set of powdery mildew infected and healthy \
-            images for live prediction. "
-        f"You can download the images from [here] \
-            (https://www.kaggle.com/codeinstitute/cherry-leaves)."
+            images for live prediction. \n"
+        f"You can download the images from [here](https://www.kaggle.com/codeinstitute/cherry-leaves)."
         )
 
     st.write("---")
