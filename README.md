@@ -60,7 +60,7 @@ To address these business requirements, we have outlined the following epics and
 [Back to top ⇧](#table-of-contents)
 
 # Hypotheses and Validations
-1. Hypothesis 1: Symptom Correlation
+* Hypothesis: Symptom Correlation
     - **Hypothesis:**
         - We suspect cherry leaves infected with powdery mildew have clear marks/signs, infected leaves have white powdery spots and stems, that can differentiate them from an uninfected leaf.
         - An Image Montage shows that typically a leaf infected with powdery mildew has white powdery spots and structure.
@@ -124,22 +124,31 @@ Page 3: Health State Detector
 Page 4: Project Hypotheses and Validation
 - Present hypothesis, explanation, validation process, and conclusion.
 
-Page 5: ML Evaluation Metrics
+Page 5: ML Performance Metrics
 - Label Distribution for Training, Validation, and Test Sets:
     - Frequency counts for each label across the training, validation, and test datasets to ensure balanced representation.
 - Dataset Allocation:
     - Percentage breakdown of the entire dataset across training, validation, and test sets to understand the data split.
-- Performance Metrics:
-    - ROC Curve: A graphical representation of the model's diagnostic ability, illustrating the true positive rate against the false positive rate at various threshold settings.
-    - Confusion Matrix: A table that shows the number of true positives, true negatives, false positives, and false negatives to evaluate the model's accuracy.
 - Training Progress:
     - Model History: Tracking accuracy and loss metrics over epochs to observe the model's learning process, specifically using a CNN model.
-- Final Model Assessment:
-    - Test Set Evaluation: Final performance results on the test set to validate the model's generalization ability and real-world applicability.
+- Performance Metrics:
+    - Generalised Performance on Test Set
+    - Confusion Matrix: A table that shows the number of true positives, true negatives, false positives, and false negatives to evaluate the model's accuracy.
 
 [Back to top ⇧](#table-of-contents)
 
 # Bugs
+1. When first using 'softmax' model and categorical_crossentropy insted of 'sigmoid' model and binary_crossentropy that ws used in walkthrough project and not permitted in this project, prediction first where 100% inverted.
+Whis issues are solved out by changing the value when publish prediction of class to 'pred_class = target_map[pred_proba < 0.5]', when using 'sigmoid' model and binary_crossentropy 'pred_class = target_map[pred_proba > 0.5]' where the correct value to get the correct classification prediction.
+This I can not really explain.
+
+2. I found an incorrect prediction of classification on one specific image of a leaf obvious infected with powdery mildew but precicted as healthy.
+The issue in this case is the colour of the background.
+See images:
+
+
+
+
 
 ## Known Bugs
 No known bugs
