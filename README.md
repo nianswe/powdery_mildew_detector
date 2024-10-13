@@ -140,14 +140,14 @@ Page 5: ML Performance Metrics
 # Bugs
 
 ## Known Bugs
-* Becauce of limitation in Heroku Deployment of maximum of 500 MB the following packages are installed in the Jupyter Notebooks and not automaticly installed in the initial requirement.txt installation:
-    - Kaggle package
-    - Scipy 1.14.1 Package (pip install scipy==1.14.1)
+* Due to limitations in Heroku Deployment of a maximum of 500 MB, the following packages are installed in Jupyter Notebooks and are not automatically installed in the initial installation of requirements.txt::
+    - Kaggle Package (pip install Kaggle==1.16.0)
+    - Scipy Package (pip install scipy==1.14.1)
     - Scikit-Learn Package (pip install scikit-learn==1.5.2) 
 
 * I found an incorrect prediction of classification on one specific image of a leaf obvious infected with powdery mildew but precicted as healthy.
 The issue in this case is related to the colour of the image background.
-See images:
+See images below:
 
 **Bright backbround give wrong prediction**
 
@@ -168,9 +168,9 @@ See images:
 
 ## Fixed Bugs
 
-* When first using 'softmax' model and categorical_crossentropy insted of 'sigmoid' model and binary_crossentropy that where used in walkthrough project and not permitted in this project, prediction first where 100% inverted.
-This issues are solved by changing the value when publish prediction of class to 'pred_class = target_map[pred_proba < 0.5]', when using 'sigmoid' model and binary_crossentropy 'pred_class = target_map[pred_proba > 0.5]' where the correct value to get the correct classification prediction.
-This I can not really explain.
+* When first using the 'softmax' model and categorical_crossentropy set by the 'sigmoid' model and binary_crossentropy used in the walkthrough project and not allowed in this project, the prediction was first 100% inverted.
+These problems are solved by changing the value when publishing prediction of class to 'pred_class = target_map[pred_proba < 0.5]', when using the 'sigmoid' model and binary_crossentropy 'pred_class = target_map[pred_proba > 0.5]' where the correct value of to get correct classification prediction.
+I can't really explain this.
 
 [Back to top ⇧](#table-of-contents)
 
@@ -233,13 +233,13 @@ To fork this repository, follow these steps:
 
 ## Main Data Analysis and Machine Learning Libraries
 **numpy 1.26.4**: Utilized for array conversions.
-**joblib 1.4.2**: 
+**joblib 1.4.2**: Running Python functions as pipeline jobs
 **matplotlib 3.9.2**: Plotted dataset distributions.
 **seaborn 0.13.2**: Plotted the model's confusion matrix.
 **streamlit 1.38.0**: Developed the project dashboard.
 **tensorflow-cpu 2.17.0**: Used for creating the model.
-**tqdm 4.66.5**:
-**scipy 1.14.1**:  
+**tqdm 4.66.5**: Progress bar in file upload
+**scipy 1.14.1**:  SciPy 
 **scikit-learn 1.5.2**: Applied for model evaluation.
 **keras 3.6.0**: Set model hyperparameters.
 
@@ -247,6 +247,15 @@ To fork this repository, follow these steps:
 [Back to top ⇧](#table-of-contents)
 
 # Credits
+
+The Code Institute, Malaria Detector project (https://github.com/Code-Institute-Solutions/WalkthroughProject01)
+CharlieMcGoldrick, ci-ms5-spudscan Project (https://github.com/CharlieMcGoldrick/ci-ms5-spudscan)
+ObiWanBonobi, Bone-Fracture-Detection Project (https://github.com/ObiWanBonobi/Bone-Fracture-Detection)
+The readme template and layout comes from:
+ - ObiWanBonobi Bone-Fracture-Detection Project
+ - CharlieMcGoldrick, ci-ms5-spudscan Project
+ - The Code Institute, Malaria Detector Project 
+
 
 ## Dataset
 - The Cherry Leaves dataset is from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
