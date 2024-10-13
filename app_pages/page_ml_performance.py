@@ -35,9 +35,9 @@ def page_ml_performance_metrics():
     st.write("### Model History")
 
     st.info(
-        "The following plots show the model training accuracy and losses.\n"
+        "The following plots show the model training accuracy and losses. \n\n"
         "The accuracy is the measure of the model's prediction accuracy \
-            compared to the true data (val_acc).\n"
+            compared to the true data (val_acc). \n\n"
         "The loss indicates incorrect predictions on the train set (loss) \
             and validation set (val_loss)."
         )
@@ -60,14 +60,14 @@ def page_ml_performance_metrics():
     st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
 
     st.success(
-        "The prediction accuracy of the test set data is above 97%.\n"
+        "The prediction accuracy of the test set data is above 97%. \n\n"
         "This is below 100%, suggesting the model is not overfitting.")
 
     st.info(
-        "The following plot shows the confusion matrix for the test dataset.\n"
-        "It shows the four possible combinations of outcomes: \n"
-        "True Positive / Negative - The model prediction is correct (green) \n"
-        "False Positive / Negative - The model prediction is incorrect (red). \n"
+        "The following plot shows the confusion matrix for the test dataset. \n\n"
+        "It shows the four possible combinations of outcomes: \n\n"
+        "True Positive / Negative - The model prediction is correct (green) \n\n"
+        "False Positive / Negative - The model prediction is incorrect (red). \n\n"
         "A good model has a high True rate and a low False rate."
         )
 
@@ -87,11 +87,11 @@ def page_ml_performance_metrics():
 
     st.info(
         "The ML model/pipeline has been successful:\n"
-        "- Business Requirement 1: This requirement is met as the Leaves \
+        "- Business Requirement 1: \n\n This requirement is met as the Leaves \
             Visualizer page \n"
         "shows that a cherry leaf that is healthy can be differentiated from \
             one that contains powdery mildew.\n"
-        "- Business Requirement 2: This requirement is met as the Powdery \
+        "- Business Requirement 2: \n\n This requirement is met as the Powdery \
             Mildew Detection page \n"
         "will predict if a cherry tree is healthy or contains powdery mildew \
             with a 99% accuracy rate.")

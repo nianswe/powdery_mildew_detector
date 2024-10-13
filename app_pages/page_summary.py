@@ -9,17 +9,17 @@ def page_summary_body():
     st.info(
         f"**General Information**\n"
         f"* Powdery mildew is a fungal disease that affects a wide range of \
-            plants.\n"
+            plants. \n\n"
         f"Powdery mildew diseases are caused by many different species of \
-            ascomycete fungi in the order Erysiphales.\n"
+            ascomycete fungi in the order Erysiphales. \n\n"
         f"Powdery mildew is one of the easier plant diseases to identify, \
             as the signs of the causal pathogen are quite distinctive."
-        f"Infected plants display white powdery spots on the leaves and stems."
-        f"This mycelial layer may quickly spread to cover all of the leaves."
+        f"Infected plants display white powdery spots on the leaves and stems. \n\n"
+        f"This mycelial layer may quickly spread to cover all of the leaves. \n\n"
         f"The lower leaves are the most affected, but the mildew can appear \
-            on any above-ground part of the plant."
+            on any above-ground part of the plant. \n\n"
         f"As the disease progresses, the spots get larger and denser as large \
-            numbers of asexual spores are formed,\n"
+            numbers of asexual spores are formed,"
         f"and the mildew may spread up and down the length of the plant.\n\n"
         f"**Project Dataset**\n"
         f"* The available dataset contains 4208 images taken from "
